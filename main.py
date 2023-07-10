@@ -48,7 +48,7 @@ finally:
     print("End program\n")
 
 
-# task 1
+# task 2
 
 try:
     equal_number1 = int(input("Enter the first number: "))
@@ -67,3 +67,43 @@ except Exception as error:
     print(f"Incorrect action{error}")
 finally:
     print("End program\n")
+
+# task 3
+# v 1
+
+try:
+
+    number1 = int(input("Enter first number: "))
+    number2 = int(input("Enter second number: "))
+
+    match_action = input("Enter match action: (+, -, *, /) ")
+
+    if match_action == "+":
+        print(f"{number1} {match_action} {number2} = {number1 + number2}")
+    elif match_action == "-":
+        print(f"{number1} {match_action} {number2} = {number1 - number2}")
+    elif match_action == "*":
+        print(f"{number1} {match_action} {number2} = {number1 * number2}")
+    elif match_action == "/":
+        print(f"{number1} {match_action} {number2} = {float(number1) / float(number2)}")
+
+# v 2
+
+    match match_action:
+        case "+":
+            print(f"{number1} {match_action} {number2} = {number1 + number2}")
+        case "-":
+            print(f"{number1} {match_action} {number2} = {number1 - number2}")
+        case "*":
+            print(f"{number1} {match_action} {number2} = {number1 * number2}")
+        case "/":
+            print(f"{number1} {match_action} {number2} = {float(number1) / float(number2)}")
+
+except ZeroDivisionError as error:
+    print("Do not divide by zero!")
+except ValueError as error:
+    print("Incorrect math action")
+except Exception as error:
+    print(f"Incorrect math action{error}")
+finally:
+    print("End program")
