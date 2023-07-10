@@ -45,4 +45,25 @@ except ValueError as error:
 except Exception as error:
     print(f"Incorrect action{error}")
 finally:
-    print("End program")
+    print("End program\n")
+
+
+# task 1
+
+try:
+    equal_number1 = int(input("Enter the first number: "))
+    equal_number2 = int(input("Enter the second number: "))
+
+    if equal_number1 == equal_number2:
+        print("The entered numbers are equal!")
+    elif equal_number1 < equal_number2:
+        print(equal_number1, equal_number2)
+    else:
+        print(equal_number2, equal_number1)
+
+except ValueError as error:
+    print("Incorrect action")
+except Exception as error:
+    print(f"Incorrect action{error}")
+finally:
+    print("End program\n")
